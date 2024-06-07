@@ -14,6 +14,11 @@ const Navbar = () => {
           </Link>
         </Box>
         <Flex alignItems="center">
+          {session && (
+            <Link as={RouterLink} to="/private" color="white" fontWeight="bold" fontSize="xl" mr={4}>
+              Private
+            </Link>
+          )}
           {session ? (
             <Button onClick={logout} colorScheme="teal" variant="outline">
               Logout
